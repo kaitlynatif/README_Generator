@@ -130,10 +130,51 @@ inquirer.prompt (
         }
     ]
 )
+.then (({title, description, installation, usage, contribution, test, license, github, email}) => {
+    // Template literal to generate markdown for README
+    const template = `# ${title}
+    ## Description
+    ${description}
+    ## Table of Contents
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [License](#license)
+    * [Contributing](#contributing)
+    * [Tests](#tests)
+    * [License](#license)
+    * [Contact] (#contact)
+    ## Installation
+    ${installation}
+    ## Usage
+    ${usage}
+    ## Contributing
+    ${contribution}
+    ## Tests
+    ${test}
+    ## License
+    ${license}
+    ## Contact
+    * GitHub: [${github}](
+    * Email: ${email}`;
+
+    // Function to create README file using fs module
+    createNewFile(title, template);
+}
+);
+
+// The Create New File function
+function createNewFile(fileName, data) {
+    // fs.writeFile() method
+    fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`, data, (err)=> {
+        if(err){
+        console.log(err);
+    }
+    console.log('README file created!');
+    });
+}
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-}
+function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 function init() {}
