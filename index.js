@@ -60,12 +60,12 @@ const questions = [
         {
             type: 'input',
             name: 'contribution',
-            message: 'Please provide contribution guidelines for your project.',
+            message: 'Please provide contribution guidelines and credits for your project.',
             validate: contributionInput => {
                 if (contributionInput) {
                     return true;
                 } else {
-                    console.log('Please enter contribution guidelines for your project.');
+                    console.log('Please enter contribution guidelines and credits for your project.');
                     return false;
                 }
             }
@@ -126,13 +126,13 @@ const questions = [
         }
     ];
 
-// Create a function to initialize the application
+// Function to initialize the application
 inquirer
  .prompt(questions)
  .then((response) => {
     // console.log(response);
     let genMarkdown = markdown(response);
     fs.writeFile("./utils/readme.md", genMarkdown, (err) => {
-        err ? console.error(err) : console.log("Success!");
+        err ? console.error(err) : console.log("Success! The README.md file has been generated.");
     })
  });
