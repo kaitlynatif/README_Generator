@@ -1,14 +1,10 @@
-// TODO: Include packages needed for this application
-const inquirer = require('inquirer');
+// Include packages needed for this application
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown');
+const inquirer = require('inquirer');
+const markdown = require("./utils/generateMarkdown.js");
 
-
-// TODO: Create an array of questions for user input
-const questions = [];
-
-inquirer.prompt (
-    [
+// Create an array of questions for user input
+const questions = [
         {
             type: 'input',
             name: 'title',
@@ -128,56 +124,15 @@ inquirer.prompt (
             }
 
         }
-    ]
-)
-.then (({title, description, installation, usage, contribution, test, license, github, email}) => {
-    // Template literal to generate markdown for README
-    const template = `# ${title}
-    ## Description
-    ${description}
-    ## Table of Contents
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributing](#contributing)
-    * [Tests](#tests)
-    * [License](#license)
-    * [Contact] (#contact)
-    ## Installation
-    ${installation}
-    ## Usage
-    ${usage}
-    ## Contributing
-    ${contribution}
-    ## Tests
-    ${test}
-    ## License
-    ${license}
-    ## Contact
-    * GitHub: [${github}](
-    * Email: ${email}`;
+    ];
 
-    // Function to create README file using fs module
-    createNewFile(title, template);
-}
-);
-
-// The Create New File function
-function createNewFile(fileName, data) {
-    // fs.writeFile() method
-    fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`, data, (err)=> {
-        if(err){
-        console.log(err);
-    }
-    console.log('README file created!');
-    });
-}
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
+// Create a function to initialize the application
+inquirer
+ .prompt(questions)
+ .then((response) => {
+    // console.log(response);
+    let genMarkdown = markdown(response);
+    fs.writeFile("./utils/readme.md", genMarkdown, (err) => {
+        err ? console.error(err) : console.log("Success!");
+    })
+ });
