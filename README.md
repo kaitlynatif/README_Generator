@@ -71,6 +71,8 @@ node index.js
 
 ## Mock-Up
 
+![Animation of application functionality.](./README_generator_gif.mp4)
+
 URL to GitHub repository:
 https://github.com/kaitlynatif/README_Generator
 
