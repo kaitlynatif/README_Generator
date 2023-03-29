@@ -74,8 +74,11 @@ node index.js
 <video width="320" height="240" controls>
 <source src="./README_generator_gif2.mov" type="video/mp4">
 </video>
+
+
 ![Animation of application functionality.](./README_generator_gif.mp4)
 ![Animation of application functionality.](./README_generator_gif2.mov)
+
 
 URL to GitHub repository:
 https://github.com/kaitlynatif/README_Generator
