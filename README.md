@@ -71,13 +71,7 @@ node index.js
 
 ## Mock-Up
 
-<video width="320" height="240" controls>
-<source src="./README_generator_gif2.mov" type="video/mp4">
-</video>
-
-
-![Animation of application functionality.](./README_generator_gif.mp4)
-![Animation of application functionality.](./README_generator_gif2.mov)
+![Animation of application functionality.](./README_generator_gif3.gif.crdownload)
 
 
 URL to GitHub repository:
