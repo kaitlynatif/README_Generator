@@ -72,7 +72,7 @@ node index.js
 ## Mock-Up
 
 <video width="320" height="240" controls>
-  <source src="./README_generator_gif.mp4" type="video/mp4">
+<source src="./README_generator_gif.mp4" type="video/mp4">
 </video>
 
 URL to GitHub repository:
