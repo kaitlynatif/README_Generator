@@ -73,6 +73,8 @@ node index.js
 
 ![Animation of application functionality.](./README_generator_gif3.gif.crdownload)
 
+![Sample of the generated README file.](./utils/readme.md)
+
 
 URL to GitHub repository:
 https://github.com/kaitlynatif/README_Generator
