@@ -1,4 +1,4 @@
-# 09 Node.js Challenge: Professional README Generator
+# Node.js Challenge: Professional README Generator
 
 # Table of Contents
 * [Description](#description)
@@ -82,7 +82,7 @@ https://github.com/kaitlynatif/README_Generator
 ## Contributions
 
 Inspirations and contributions from the following sources:
-(https://youtu.be/2VUQABoFOqw)
+https://youtu.be/2VUQABoFOqw
 
 ## Questions
 
